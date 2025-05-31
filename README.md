@@ -1,71 +1,101 @@
-# sfclone README
+# 🌟 SFClone - Effortless Salesforce Component Backups in VS Code
 
-This is the README for your extension "sfclone". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+A simple, elegant VS Code extension to back up your Salesforce Apex, LWC, and Aura components with just one click. Ideal for versioning, pre-deployment snapshots, and peace of mind.
 
 ---
 
-## Following extension guidelines
+## 🚀 Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- 📁 **Backup current file or entire component folders**
+- 🧠 **Smart detection:**
+  - For **LWC/Aura**: backs up the full component folder
+  - For **Apex**: backs up only the `.cls`, `.trigger`, or related files
+- 🕒 **Time-stamped** and optionally **labeled** backups
+- 📂 Organized in a `/SFClone Backup/` folder
+- 🛡️ **Auto-added to `.gitignore`** to avoid polluting version control
+- 💻 **No Salesforce login or configuration required**
+- 🎁 **Free to use** — Optional donation link below
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## ✨ Usage
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Open any Apex, LWC, or Aura file in your Salesforce DX project.
+2. Open **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`) → type:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+   ```
+   SFClone: Clone Components
+   ```
 
-## For more information
+3. Choose:
+   - `Backup current file/component`
+   - `Backup all components (classes, lwc, aura)`
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+4. Optionally enter a short label for the backup folder (e.g., `pre-deploy-fix`)
 
-**Enjoy!**
+🎉 That’s it! Your backup will be available under:
+
+```bash
+<SF Project Root>/SFClone Backup/<timestamp>_<label (optional)>
+```
+
+---
+
+## 📦 Example Structure
+
+```bash
+SFClone Backup/
+├── 2025-05-31T10-32-00Z_pre-deploy-fix/
+│   ├── classes/
+│   │   └── MyClass.cls
+│   ├── lwc/
+│   │   └── myComponent/
+│   └── aura/
+│       └── myAuraComp/
+```
+
+---
+
+## 📁 Auto `.gitignore`
+
+On first run, the extension checks and auto-appends `/SFClone Backup/` to your project's `.gitignore` file, ensuring your backups aren’t committed to Git.
+
+---
+
+## 💡 Why SFClone?
+
+- 🚫 No external tools or CLI setup required  
+- 🔄 Great for **ad-hoc backups** before large changes  
+- 🪶 Lightweight and intuitive  
+- 🔌 Seamlessly integrates into your dev workflow  
+
+---
+
+## 💖 Support & Donations
+
+If this extension helped you, consider supporting its development.
+
+[☕ Buy Me a Coffee](https://www.buymeacoffee.com/manoharsiriki)
+
+---
+
+## 🛠️ Installation
+
+You can install directly from the **Visual Studio Code Marketplace** (coming soon!)  
+Or clone and run locally:
+
+```bash
+git clone https://github.com/your-username/sfclone.git
+cd sfclone
+npm install
+npm run compile
+code .
+```
+
+---
+
+## 🧠 Author
+
+**Manohar Siriki**  
+Salesforce Technical Architect | VS Code Enthusiast  
+[Connect on LinkedIn](https://www.linkedin.com/in/manoharsiriki)
