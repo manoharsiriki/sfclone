@@ -1,46 +1,47 @@
 {
-  "name": "sfclone",
-  "displayName": "SFClone",
-  "description": "Clone and backup Salesforce components with ease",
-  "version": "0.1.0",
-  "engines": {
-    "vscode": "^1.70.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:sfclone.cloneComponent",
-    "onCommand:sfclone.backupComponent"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "sfclone.cloneComponent",
-        "title": "SFClone: Clone Current Component"
-      },
-      {
-        "command": "sfclone.backupComponent",
-        "title": "SFClone: Backup Component(s)"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "package": "vsce package"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^11.0.4",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^18.0.0",
-    "@types/vscode": "^1.70.0",
-    "typescript": "^4.7.0",
-    "vsce": "^2.15.0"
-  },
-  "dependencies": {
-    "fs-extra": "^11.1.1"
-  }
+    "name": "sfclone",
+    "displayName": "SFClone",
+    "description": "Clone and backup Salesforce components with ease",
+    "icon": "images/sfclone-icon.jpeg",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:sfclone.cloneComponent",
+        "onCommand:sfclone.backupComponent"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "sfclone.cloneComponent",
+                "title": "SFClone: Clone Current Component"
+            },
+            {
+                "command": "sfclone.backupComponent",
+                "title": "SFClone: Backup Component(s)"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.70.0",
+        "typescript": "^4.7.0",
+        "vsce": "^2.15.0"
+    },
+    "dependencies": {
+        "fs-extra": "^11.1.1"
+    }
 }
