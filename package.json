@@ -2,8 +2,8 @@
     "name": "sfclone",
     "displayName": "SFClone",
     "description": "Clone and backup Salesforce components with ease",
-    "icon": "images/sfclone-icon.jpeg",
-    "version": "0.1.0",
+    "icon": "images/SFClone-icon.png",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -12,7 +12,9 @@
     ],
     "activationEvents": [
         "onCommand:sfclone.cloneComponent",
-        "onCommand:sfclone.backupComponent"
+        "onCommand:sfclone.backupComponent",
+        "onCommand:sfclone.restoreBackup",
+        "onCommand:sfclone.deleteBackups"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -24,6 +26,14 @@
             {
                 "command": "sfclone.backupComponent",
                 "title": "SFClone: Backup Component(s)"
+            },
+            {
+                "command": "sfclone.restoreBackup",
+                "title": "SFClone: Restore Backup"
+            },
+            {
+                "command": "sfclone.deleteBackups",
+                "title": "SFClone: Delete All Backups"
             }
         ]
     },
@@ -43,5 +53,11 @@
     },
     "dependencies": {
         "fs-extra": "^11.1.1"
-    }
+    },
+    "publisher": "ManoharSiriki",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/manoharsiriki/sfclone.git"
+    },
+    "license": "MIT"
 }
