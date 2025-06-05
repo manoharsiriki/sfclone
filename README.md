@@ -159,11 +159,6 @@ Or run this in the command line:
 ext install ManoharSiriki.sfclone
 ```
 
-bash
-Copy
-Edit
-ext install ManoharSiriki.sfclone
-
 ```bash
 git clone https://github.com/your-username/sfclone.git
 cd sfclone
