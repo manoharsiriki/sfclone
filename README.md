@@ -65,6 +65,7 @@ A simple, elegant VS Code extension to back up, clone, restore, and delete your 
 <SF Project Root>/SFClone Backup/YYYYMMDD_HHMMSS_<label>
 ```
 
+---
 
 
 
@@ -87,6 +88,7 @@ A simple, elegant VS Code extension to back up, clone, restore, and delete your 
 
 🎉 That’s it! Your files are restored from the backup:
 
+---
 
 ### 🗑️ Delete All Backups
 
